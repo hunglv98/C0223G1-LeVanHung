@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển tiền</title>
+</head>
+<body>
+<form></form>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input id="tien" type="text" name="amount"></td>
+        <td><select id="tu" name="from">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+        </select></td>
+        <td>
+            <select id="den" name="to">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <button id="chay">Convert</button>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="text" id="dich" colspan="4" readonly></td>
+
+    </tr>
+</table>
+</form>
+<script>
+    var a = document.getElementById("chay");
+    var f = document.getElementById("dich");
+    a.addEventListener("click", clickFunction);
+
+    function clickFunction() {
+        var b = document.getElementById("tien").value;
+        var c = document.getElementById("tu").value;
+        var d = document.getElementById("den").value;
+        if (c == d) {
+            f.value = b;
+        } else if (c == "VND" && d == "USD") {
+            f.value = b / 23000
+        } else {
+            f.value = b * 23000
+        }
+
+
+    }
+
+</script>
+</body>
+</html>

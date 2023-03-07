@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade</title>
+</head>
+<body>
+<script>
+    var inputPhysics = prompt("Nhập điểm Vật Lý");
+    var inputChemics = prompt("Nhập điểm Hóa học");
+    var inputBiology = prompt("Nhập điểm Sinh học");
+    var Physics = parseInt(inputPhysics);
+    var Chemics = parseInt(inputChemics);
+    var Biology = parseInt(inputBiology);
+    var total = Physics + Chemics + Biology;
+    var avg = total / 3;
+    document.write("Tổng điểm bằng "+ total);
+    document.write("<br/>")
+    document.write("Điểm trung bình bằng " + avg  );
+
+
+</script>
+</body>
+</html>
