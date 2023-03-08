@@ -5,7 +5,7 @@
     <title>Tính toán</title>
 </head>
 <body>
-<form>
+
     <h1>Caculator</h1>
     <table>
         <tr>
@@ -14,12 +14,42 @@
         </tr>
 
     </table>
-    <button>cong+</button>
-    <button>tru-</button>
-    <button>nhan*</button>
-    <button>chia/</button><br>
-    Result division: <input type="text" readonly>
+    <button id="cong" name="6">cong+</button>
+    <button id="tru" name="7">tru-</button>
+    <button id="nhan" name="8">nhan*</button>
+    <button id="chia" name="9">chia/</button><br>
+    Result division: <input id="result" type="text" readonly>
 
-</form>
+<script>
+
+    var a = document.getElementById("cong");
+    a.addEventListener("click",clickFunction1);
+    function clickFunction1(){
+        var x = parseInt(document.getElementById("n1").value);
+        var y = parseInt(document.getElementById("n2").value);
+        document.getElementById("result").value=x+y;
+    }
+    var b = document.getElementById("tru");
+    b.addEventListener("click",clickFunction2);
+    function clickFunction2(){
+        var x = parseInt(document.getElementById("n1").value);
+        var y = parseInt(document.getElementById("n2").value);
+        document.getElementById("result").value=x-y;
+    }
+    var c = document.getElementById("nhan");
+    c.addEventListener("click",clickFunction3);
+    function clickFunction3(){
+        var x = parseInt(document.getElementById("n1").value);
+        var y = parseInt(document.getElementById("n2").value);
+        document.getElementById("result").value=x*y;
+    }
+    var d = document.getElementById("chia");
+    d.addEventListener("click",clickFunction4);
+    function clickFunction4(){
+        var x = parseInt(document.getElementById("n1").value);
+        var y = parseInt(document.getElementById("n2").value);
+        document.getElementById("result").value=x/y;
+    }
+</script>
 </body>
 </html>
