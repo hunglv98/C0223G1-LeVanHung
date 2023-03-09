@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+<script>
+    var inputOld = prompt("Nhập số điện của tháng cũ");
+    var inputNew = prompt("Nhập số điện của tháng này");
+    var tieuThu = inputNew - inputOld;
+    if (tieuThu <= 50) {
+        var bac1 = tieuThu * 1678;
+        alert("Tiền điện tháng này là " + bac1);
+    } else if (tieuThu <= 100) {
+        var bac2 = bac1 + (tieuThu - 50) * 1734;
+        alert(bac1)
+        alert("Tiền điện tháng này là " + bac2);
+    } else if (tieuThu <= 200) {
+        var bac3 = bac2 + (tieuThu - 100) * 2014;
+        alert("Tiền điện tháng này là " + bac3);
+    } else if (tieuThu <= 300) {
+        var bac4 = bac3 + (tieuThu - 200) * 2536;
+        alert("Tiền điện tháng này là " + bac4);
+    } else if (tieuThu <= 400) {
+        var bac5 = bac4 + (tieuThu - 300) * 2834;
+        alert("Tiền điện tháng này là " + bac5)
+    } else {
+        var bac6 = bac5 + (tieuThu - 400) * 2927;
+        alert("Tiền điện tháng này là " + bac6);
+    }
+</script>
+</body>
+</html>

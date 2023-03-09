@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi so BMI</title>
+</head>
+<body>
+<script>
+  var weight = prompt("Nhập cân nặng theo kilogram")*1;
+  var height = prompt("Nhập chiều cao theo mét")*1;
+  var bmi = weight/(height*height);
+  if(bmi>=30){
+    alert("Obese");
+  }else if(bmi>=25){
+      alert("Overweight");
+  }else if(bmi>=18.5){
+      alert("Normal");
+  }else{"Underweight"};
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>học lực</title>
+</head>
+<body>
+<script>
+  var input1 = prompt("Nhập điểm kiểm tra 1 tiết")*1;
+  var input2 = prompt("Nhập điểm kiểm tra giữa kỳ")*1;
+  var input3 = prompt("Nhập điểm kiểm tra cuối kỳ")*1
+  var avg = (input1 +input2+input3*2)/4;
+  if (avg >=8){
+      alert("Học lực giỏi");
+  } else if(avg >=6.5){
+      alert("Học lực khá");
+  } else if(avg >=5){
+      alert("Học lực trung bình");
+  } else{
+      alert("Học lực yếu");
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CẠNH TAM GIÁC</title>
+</head>
+<body>
+<script>
+    var a = prompt("Nhập vào 1 cạnh của tam giác");
+    var b = prompt("Nhập vào 1 cạnh khác của tam giác");
+    var c = prompt("Nhập vào 1 cạnh còn lại của tam giác");
+    if (a > 0 && b > 0 && c > 0) {
+        if (a + b > c && b + c > a && a + c > b) {
+            alert(a + " " + b + " " + c + " là ba cạnh của tam giác");
+        } else {
+            alert(a + " " + b + " " + c + " không phải là ba cạnh của tam giác");
+        }
+    } else {
+        alert(a + " " + b + " " + c + " không phải là ba cạnh của tam giác");
+    }
+</script>
+</body>
+</html>
