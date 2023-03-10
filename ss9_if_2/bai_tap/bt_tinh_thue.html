@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    var income = prompt("Nhập vào thu nhập cá nhân trong 1 tháng") * 1;
+    if (income > 80000000) {
+        alert("Thuế thu nhập cá nhân là " + income * 0.35);
+    } else if (income > 52000000) {
+        alert("Thuế thu nhập cá nhân là " + income * 0.30);
+    } else if (income > 32000000) {
+        alert("Thuế thu nhập cá nhân là " + income * 0.25);
+    } else if (income > 18000000) {
+        alert("Thuế thu nhập cá nhân là " + income * 0.20);
+    } else if (income > 10000000) {
+        alert("Thuế thu nhập cá nhân là " + income * 0.15);
+    } else if (income > 5000000) {
+        alert("Thuế thu nhập cá nhân là " + income * 0.10);
+    } else {
+        alert("Thuế thu nhập cá nhân là " + income * 0.05);
+    }
+</script>
+</body>
+</html>

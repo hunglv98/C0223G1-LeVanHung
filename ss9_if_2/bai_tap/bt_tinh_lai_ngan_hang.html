@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi kép ngân hàng</title>
+</head>
+<body>
+<script>
+    var money = prompt("Nhập số tiền gửi ban đầu") * 1;
+    var inputMonth = prompt("Nhập số tháng sẽ gửi") * 1;
+    var interest = prompt("Nhập lãi xuất hàng tháng") * 1;
+    var moneyPay = money * Math.pow((1 + interest / 100), inputMonth);
+    alert("Số tiền lãi sẽ trả là" + (moneyPay - money));
+</script>
+</body>
+</html>
