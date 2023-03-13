@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+</head>
+<body>
+<button id="run" onclick="clickFunction()">Chơi</button>
+</body>
+<script>
+    function clickFunction() {
+        var khoang = prompt("Nhập khoảng muốn đoán") * 1;
+        var soNgauNhien = Math.random() * khoang;
+        for (i = 0; i < 3; i++) {
+            var doan = prompt("Nhập số bạn đoán") * 1;
+            if (doan == soNgauNhien) {
+                alert("chúc mừng bạn đoán chính xác");
+                break;
+            } else if (doan > soNgauNhien) {
+                alert("số bạn đoán lớn hơn");
+            } else {
+                alert("số bạn đoán nhỏ hơn");
+            }
+        }
+        alert("Bạn đã hết số lần đoán");
+    }
+</script>
+</html>

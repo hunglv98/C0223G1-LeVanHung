@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa của số nguyên dương</title>
+</head>
+<body>
+<script>
+    var input = prompt("Nhập vào số nguyên dương") * 1;
+    let giaiThua = 1;
+    for (; input > 0; input--) {
+        giaiThua *= input;
+    }
+    alert("Giai thừa bằng " + giaiThua);
+</script>
+</body>
+</html>

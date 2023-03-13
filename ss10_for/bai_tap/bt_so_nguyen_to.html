@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+<script>
+    var input = prompt("nhập vào n số nguyên tố cần lấy ra") * 1;
+    for (i = 2, bienDem = 0; bienDem < input; i++) {
+        for (uoc = 1, demUoc = 0; uoc <= i; uoc++) {
+            if (i % uoc === 0) {
+                demUoc++;
+            }
+        }
+        if (demUoc === 2) {
+            document.write(i);
+            document.write("</br>");
+            bienDem++;
+            demUoc = 0;
+        }
+    }
+
+</script>
+</body>
+</html>

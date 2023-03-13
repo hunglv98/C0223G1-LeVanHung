@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập nhiệt độ</title>
+</head>
+<body>
+<script>
+    var input = prompt("Nhập vào nhiệt độ") * 1;
+    while (input > 100) {
+        input = prompt("Hạ nhiệt độ") * 1;
+        while (input < 20) {
+            input = prompt("Tăng nhiệt độ") * 1;
+        }
+    }
+    alert(input);
+</script>
+</body>
+</html>
