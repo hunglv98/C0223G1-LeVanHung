@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số từ trong 1 chuỗi</title>
+</head>
+<body>
+<script>
+    let input = prompt("nhập vào một chuỗi bất kỳ");
+    let newArray = [];
+    let count = 0;
+    newArray = input.split(" ");
+    for (let i = 0; i < newArray.length; i++) {
+        count++;
+    }
+    document.write("Số từ trong chuỗi là " + count);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+Nhập từ:<input id="input" type="text">
+<button onclick="dichfunction()">Dịch</button>
+<p id="result"></p>
+</body>
+<script>
+    var tiengViet = ["Trường học", "Học sinh", "Bút mực", "Bút chì"];
+    var tiengAnh = ["School", "Student", "Pen", "Pencil"];
+    function dichfunction() {
+        var input = document.getElementById("input").value;
+        var chiSo = tiengAnh.indexOf(input);
+        if (chiSo == (-1)) {
+            document.getElementById("result").innerText="Không có từ này trong từ điển";
+        } else {
+            document.getElementById("result").innerText=tiengViet[chiSo];
+        }
+    }
+</script>
+</html>

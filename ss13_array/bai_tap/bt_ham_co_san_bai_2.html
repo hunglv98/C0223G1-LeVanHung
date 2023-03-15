@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng hàm có sẵn</title>
+</head>
+<body>
+<script>
+    var input = prompt("Nhập vào một dãy số");
+    let newString = "";
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] % 2 == 0 && input[i + 1] % 2 == 0) {
+            newString += input[i] + "-";
+        } else {
+            newString += input[i];
+        }
+    }
+    document.write(newString);
+</script>
+</body>
+</html>

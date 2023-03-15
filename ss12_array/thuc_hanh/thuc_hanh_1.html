@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ARRAY 1</title>
+</head>
+<body>
+<h1>Sample screen:</h1>
+<input id="text" type="text">
+<button onclick="addFunction()">Add</button>
+<button onclick="displayFunction()">Display</button>
+<p id="finish"></p>
+</body>
+<script>
+    var array = [];
+    var x = 0;
+    function addFunction(){
+        array[x] = document.getElementById("text").value;
+        x++;
+        document.getElementById("text").value="";
+    }
+    function displayFunction(){
+        let e = "<hr/>";
+        for (i=0;i<array.length;i++){
+            e += "Element" + i+ " la "+ array[i] + "<br/>";
+            document.getElementById("finish").innerText=e;
+
+        }
+
+    }
+
+
+</script>
+</html>

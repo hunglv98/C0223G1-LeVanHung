@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm min trong nhiều mảng</title>
+</head>
+<body>
+<script>
+    function timMinFunction(array) {
+            let min = array[0];
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] < min) {
+                    min = array[i];
+                }
+            }
+        return min;
+    }
+
+    let array1 = [3, 5, 7, 1, 6, -9, 10];
+    let result = timMinFunction(array1);
+    let array2 = [9128, 124124, 567456, 312, -2, 234, 235];
+    let result2 = timMinFunction(array2);
+    let array3 = [];
+    let result3 = timMinFunction(array3);
+    alert(result);
+</script>
+</body>
+</html>

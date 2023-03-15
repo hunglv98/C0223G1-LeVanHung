@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thay thế - bằng _</title>
+</head>
+<body>
+<script>
+    let chuoi = "i-love-you";
+    let chuoiMoi="";
+    for (let i = 0; i < chuoi.length; i++) {
+        if(chuoi[i]=="-"){
+            chuoiMoi+="_";
+        }else chuoiMoi+=chuoi[i];
+    }
+document.write(chuoiMoi);
+
+</script>
+</body>
+</html>

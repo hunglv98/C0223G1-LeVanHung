@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm max trong mảng và trung bình mảng</title>
+</head>
+<body>
+<script>
+    let array = [10, 123, 34, 546, 123, 5646, 123123, 3423, 12, 23424];
+    let max = array[0];
+    let total = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] >= max) {
+            max = array[i];
+        }
+        total += array[i];
+    }
+    document.write("Max bằng " + max);
+    document.write("<br>");
+    document.write("Trung bình mảng bằng " + (total / array.length));
+</script>
+</body>
+</html>
