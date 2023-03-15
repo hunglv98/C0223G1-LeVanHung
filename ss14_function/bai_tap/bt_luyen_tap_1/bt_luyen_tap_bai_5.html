@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị tên ngôi sao</title>
+</head>
+<body>
+<script>
+    let tenNgoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function layThamSoFunction(input){
+        let index = tenNgoiSao.indexOf(input);
+        if(index == (-1)){
+            alert("không có tên ngôi sao này");
+        }else{
+            alert("Tên của chòm sao là "+chomSao[index]);
+        }
+    }
+    let nhapVao = prompt("nhập vào tên ngôi sao");
+    layThamSoFunction(nhapVao);
+</script>
+</body>
+</html>

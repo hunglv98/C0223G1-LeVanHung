@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm 2 tham số</title>
+</head>
+<body>
+<script>
+    function compareFunction(a,b){
+        let total;
+        if(a>b){
+            total ="Số thứ 1 lớn hơn số thứ 2";
+        }else{
+            total = a+b;
+        }return total;
+    }
+    let input1 = prompt("Nhập số thứ nhất")*1;
+    let input2 = prompt("Nhập số thứ hai")*1;
+    let result = compareFunction(input1,input2);
+    alert(result);
+</script>
+</body>
+</html>
