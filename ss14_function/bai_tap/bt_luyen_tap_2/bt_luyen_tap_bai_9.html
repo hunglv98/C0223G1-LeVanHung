@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra 1 ký tự trong mảng</title>
+</head>
+<body>
+<script>
+    function checkFunction(array, x) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (x == array[i]) {
+                count++;
+            }
+        }
+        if (count == 0) {
+            count = (-1);
+        }
+        return count;
+    }
+
+    let array1 = ["i", "l", "y", "i", "m", "u"];
+    let input = prompt("Nhập vào 1 ký tự bất kỳ");
+    let ketQua = checkFunction(array1, input);
+    alert("Ký tự xuất hiện " + ketQua + " lần");
+</script>
+</body>
+</html>

@@ -7,11 +7,12 @@
 <body>
 <script>
     let array = ["i", "l", "o", "v", "e", "u"];
-    let finish = "";
+    let finish = [];
     for (let i = (array.length - 1); i >= 0; i--) {
-        finish += array[i];
+        finish.push(array[i]);
     }
     document.write(finish);
+    console.log(finish);
 
 </script>
 </body>

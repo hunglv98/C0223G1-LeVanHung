@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let thuNhap = prompt("Nhập vào thu nhập của bạn") * 1;
+    let thue;
+    if (thuNhap >= 15000000) {
+        thue = thuNhap * 0.2;
+    } else if (thuNhap >= 7000000) {
+        thue = thuNhap * 0.1;
+    } else {
+        thue = thuNhap * 0.05;
+    }
+    let thucNhan = thuNhap - thue;
+    alert("Số tiền thực nhận là "+thucNhan);
+</script>
+</body>
+</html>

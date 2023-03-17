@@ -6,14 +6,13 @@
 </head>
 <body>
 <script>
-    let chuoi = "i-love-you";
-    let chuoiMoi="";
-    for (let i = 0; i < chuoi.length; i++) {
-        if(chuoi[i]=="-"){
-            chuoiMoi+="_";
-        }else chuoiMoi+=chuoi[i];
+    let array = ["i", "-", "l", "o", 'v', "e", "-", "y", "o", "u"];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] == "-") {
+            array[i] = "_";
+        }
     }
-document.write(chuoiMoi);
+    console.log(array);
 
 </script>
 </body>

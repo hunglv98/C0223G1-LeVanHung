@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ 2 số nguyên</title>
+</head>
+<body>
+<script>
+    // function doiChoFunction(array) {
+    //     let bienphu =array[0];
+    //     array[0]=array[1];
+    //     array[1]=bienphu;
+    //
+    // }
+    //
+    // let input1 = prompt("Nhập vào số a")*1;
+    // let input2 = prompt("Nhập vào số b")*1;
+    // let array = [input1,input2];
+    // doiChoFunction(array);
+    // alert(array[0]);
+    function doiChoFunction(a,b){
+        let bienphu = a;
+        a=b;
+        b= bienphu
+        return [a,b]
+    }
+    let input1 = prompt("Nhập vào số a")*1;
+    let input2 = prompt("Nhập vào số b")*1;
+    let result = doiChoFunction(input1,input2);
+    console.log(result);
+</script>
+</body>
+</html>
