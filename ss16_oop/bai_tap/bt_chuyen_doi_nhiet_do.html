@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<script>
+    let Temperature = function (inputC){
+        this.doC = inputC;
+        this.convertToF = function (){
+            return inputC*1.8+32;
+
+        }
+        this.convertToK = function (){
+            return 273.15 + inputC;
+        }
+    }
+    let temperature = new Temperature(25);
+    let doF = temperature.convertToF();
+    let doK = temperature.convertToK();
+    document.write("Độ F bằng "+doF);
+    document.write("<br>");
+    document.write("Độ K bằng "+doK);
+</script>
+</body>
+</html>
