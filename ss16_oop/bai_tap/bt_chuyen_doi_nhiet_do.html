@@ -6,22 +6,23 @@
 </head>
 <body>
 <script>
-    let Temperature = function (inputC){
-        this.doC = inputC;
-        this.convertToF = function (){
-            return inputC*1.8+32;
-
+    class Temperature {
+        constructor(celsius) {
+            this.celsius = celsius;
         }
-        this.convertToK = function (){
-            return 273.15 + inputC;
+
+        convertToKelvin() {
+            return (273.15 + this.celsius);
+        }
+
+        convertToF() {
+            return (this.celsius * 1.8 + 32);
         }
     }
-    let temperature = new Temperature(25);
-    let doF = temperature.convertToF();
-    let doK = temperature.convertToK();
-    document.write("Độ F bằng "+doF);
-    document.write("<br>");
-    document.write("Độ K bằng "+doK);
+
+    let input = prompt("Nhập vào nhiệt độ") * 1;
+    let temperature = new Temperature(input);
+    alert("Độ F bằng " + temperature.convertToF() + " và độ Kenvin bằng " + temperature.convertToKelvin());
 </script>
 </body>
 </html>

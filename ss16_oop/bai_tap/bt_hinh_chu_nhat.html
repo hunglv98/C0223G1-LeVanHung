@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,29 +7,32 @@
 <body>
 <canvas id="input" width="200" height="100"></canvas>
 <script>
-    let Rectangle = function (length, width) {
-        this.length = length;
-        this.width = width;
-        this.getLength = function () {
-            return length;
+
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
         }
-        this.getWidth = function () {
-            return width;
+
+        getArea() {
+            return this.width * this.height;
         }
-        this.getArea = function () {
-            return length * width;
-        }
-        this.getPerimeter = function () {
-            return (length + width) * 2
+
+        getPerimeter() {
+            return (this.width + this.height) * 2;
         }
     }
-    let rectangle = new Rectangle(200,100);
-    let width = rectangle.getWidth();
-    let length = rectangle.getLength();
-    alert(width);
-    let c = document.getElementById("input");
-    let ctx = c.getContext("2d");
-    ctx.fillRect(0,0,200,100);
+
+    let width = prompt("Nhập vào chiều dài") * 1;
+    let height = prompt("Nhập vào chiều rộng") * 1;
+    let rectangle = new Rectangle(width, height);
+    let resultArea = rectangle.getArea();
+    let resultPerimeter = rectangle.getPerimeter();
+    alert("Chu vi bằng " + resultPerimeter + " và diện tích bằng " + resultArea);
+    let canvas = document.getElementById("input");
+    let ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.fillRect(0, 0, rectangle.width, rectangle.height);
 
 </script>
 </body>
