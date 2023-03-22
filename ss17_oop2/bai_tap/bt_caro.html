@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caro</title>
+</head>
+<body>
+<div id="table"></div>
+</body>
+<script>
+    let array = new Array(20)
+    for (let i = 0; i < array.length; i++) {
+        array[i] = new Array(20);
+        for (let j = 0; j < array[i].length; j++) {
+            array[i][j] = "";
+        }
+    }
+
+    function display() {
+        let table = '<table border="1">';
+        for (let i = 0; i < array.length; i++) {
+            table += '<tr>';
+            for (let j = 0; j < array[i].length; j++) {
+                table += '<td onclick="play(' + i + ',' + j + ')" style="width: 20px;height: 20px">' + array[i][j] + '</td>';
+            }
+            table += '</tr>';
+        }
+        table += '</table>';
+        document.getElementById("table").innerHTML = table;
+    }
+
+    display();
+    let play1 = true;
+
+    function play(i, j) {
+        if (array[i][j] != "") {
+            alert("O nay da duoc danh");
+        } else if (play1) {
+            array[i][j] = "X";
+            play1 = false;
+        } else {
+            array[i][j] = "O";
+            play1 = true;
+
+        }
+        display();
+        win(i,j);
+    }
+
+    function win(i, j) {
+        if (
+            array[i][j] == array[i][j + 1] &&
+            array[i][j] == array[i][j + 2] &&
+            array[i][j] == array[i][j + 3] &&
+            array[i][j] == array[i][j + 4] &&
+            array[i][j] == array[i][j + 5]) {
+            alert("win")
+        }
+    }
+
+
+</script>
+</html>

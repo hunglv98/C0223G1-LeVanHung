@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam và Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getWeight() {
+            if (this.isEmpty()) {
+                return this.weight = 0;
+            } else {
+                return this.weight
+            }
+        }
+
+        decrease() {
+            if (this.isEmpty()) {
+                alert("da het tao");
+            } else {
+                this.weight--;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender === 1) {
+                return true;
+            } else return false;
+        }
+
+        setGender() {
+            if (this.isMale()) {
+                alert("Dan ong");
+            } else {
+                alert("phu nu");
+            }
+        }
+
+        checkApple(Apple) {
+            if (Apple.isEmpty()) {
+                return false;
+            } else return true;
+        }
+
+        eat(Apple) {
+            if (this.checkApple(Apple)) {
+                Apple.decrease();
+                this.weight++;
+            }
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+        say(String){
+            alert(this.name+" saying "+String);
+        }
+    }
+
+    let apple1 = new Apple(10);
+    let adam = new Human("Adam", 1, 50);
+    adam.eat(apple1);
+    // alert(adam.getWeight());
+    // alert(apple1.weight);
+    let eva = new Human("Eva", 0, 40);
+    let apple2 = new Apple(5);
+    adam.eat(apple2);
+    // alert(adam.getWeight());
+    eva.eat(apple2);
+    alert(apple2.weight);
+    eva.say("yummy");
+
+
+</script>
+</body>
+</html>
