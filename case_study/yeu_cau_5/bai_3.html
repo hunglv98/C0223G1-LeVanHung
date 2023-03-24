@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tính min max</title>
+</head>
+<body>
+<script>
+    function min(arr){
+        let min = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for(let j=0; j <arr[i].length;j++){
+                if(arr[i][j]<min){
+                    min = arr[i][j];
+                }
+            }
+        }return min;
+    }
+    function max(arr){
+        let max = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for(let j=0; j <arr[i].length;j++){
+                if(arr[i][j]>max){
+                    max = arr[i][j];
+                }
+            }
+        }return max;
+    }
+    let array= [
+        [1,2,3,4,5],
+        [2,8,3,-1,2]
+    ];
+    alert(max(array));
+</script>
+</body>
+</html>

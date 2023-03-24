@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<button onclick="add()">Thêm học viên</button>
+<button onclick="edit()">Edit</button>
+<button onclick="deleteFunction()">Delete</button>
+<!--<table border="1">-->
+<!--    <tr>-->
+<!--        <td>id</td>-->
+<!--        <td>name</td>-->
+<!--        <td>class</td>-->
+<!--        <td>mail</td>-->
+<!--        <td>date</td>-->
+<!--        <td>module</td>-->
+<!--    </tr>-->
+<!--</table>-->
+<p id="finish"></p>
+<script>
+    let array = [];
+
+    class Student {
+        constructor(id, name, class1, mail, date, module) {
+            this.id = id;
+            this.name = name;
+            this.class = class1;
+            this.mail = mail;
+            this.date = date;
+            this.module = module;
+        }
+    }
+
+    function add() {
+        let id = prompt("Nhập id")
+        let name = prompt("nhập tên học viên")
+        let class1 = prompt("nhập lớp")
+        let mail = prompt("nhập mail")
+        let date = prompt("nhập ngày tháng năm sinh")
+        let module = prompt("nhập module")
+        let student = new Student(id, name, class1, mail, date, module);
+        array.push(student);
+        display();
+
+    }
+
+    function display() {
+        let table = '<table border="1">';
+        table += '<tr>';
+        table += '<td>' + 'id' + '</td>\n' +
+            '        <td>' + 'name' + '</td>\n' +
+            '        <td>' + 'class' + '</td>\n' +
+            '        <td>' + 'mail' + '</td>\n' +
+            '        <td>' + 'date' + '</td>\n' +
+            '        <td>' + 'module' + '</td>'
+        table += '</tr>';
+        for (let i = 0; i < array.length; i++) {
+            table += '<tr>';
+            table += '<td>' + array[i].id + '</td>\n' +
+                '        <td>' + array[i].name + '</td>\n' +
+                '        <td>' + array[i].class + '</td>\n' +
+                '        <td>' + array[i].mail + '</td>\n' +
+                '        <td>' + array[i].date + '</td>\n' +
+                '        <td>' + array[i].module + '</td>'
+            table += '</tr>';
+        }
+        table += '</table>';
+        document.getElementById("finish").innerHTML = table;
+    }
+
+
+function deleteFunction(){
+        let input = prompt("Nhập vào thông tin id")
+    let flag = false;
+        let index = 0;
+    for (let i = 0; i < array.length; i++) {
+        if(array[i].id==input){
+            flag = true;
+            index = i;
+            break;
+        }else flag = false;
+    }
+    if(flag == true){
+        if(confirm("bạn có muốn xóa không?")){
+            array.splice(index,1);
+        }else alert("Không tồn tại mã học viên");
+    }
+    display();
+}
+    function edit() {
+        let input = prompt("Nhập vào mã học viên");
+        let flag1 = false;
+        let index = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].id == input) {
+                flag1=true;
+                index=i;
+                break;
+
+            } else {
+                flag1 = false;
+            }
+        }
+        if(flag1){
+            array[index].name = prompt("nhập vào tên");
+            array[index].class = prompt("Nhập vào lớp");
+            array[index].mail = prompt("Nhập vào mail");
+            array[index].date = prompt("nhập vào ngày sinh");
+            array[index].module = prompt("nhập vào module");
+        }else alert("không có");
+        display();
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let string = "tRuong    TaN   HAI ";
+    let newString = "";
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] != " " && string[i + 1] != " " || string[i] != " " && string[i + 1] == " " || string[i] == " " && string[i + 1] != " ") {
+            newString += string[i];
+        }
+    }
+    let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let lowerCase = "abcdefghijklmnopqrstuvwxyz";
+    if(lowerCase.indexOf(newString[0])!=(-1)){
+        newString[0].toUpperCase();
+    }
+    console.log(newString[0]);
+    console.log(lowerCase.indexOf(newString[0]))
+    alert(newString[0].toUpperCase())
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên tố trong mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    function kiemTraSoNguyenTo(x) {
+        let linhCanh = true;
+        if (x == 1) {
+            linhCanh = false;
+        } else if (x == 2) {
+            linhCanh = true;
+        } else {
+            for (let i = 2; i < x - 1; i++) {
+                if (x % i == 0) {
+                    linhCanh = false;
+                    break;
+                } else linhCanh = true;
+            }
+
+        }
+        return linhCanh;
+    }
+
+    function display(array) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (kiemTraSoNguyenTo(array[i][j])) {
+                    console.log(array[i][j]);
+                    count++;
+                }
+            }
+        }
+        console.log("count bằng " + count);
+    }
+
+    let input = [
+        [1, 2, 3, 4, 5],
+        [6, 7, 8, 9, 10]
+    ];
+    display(input);
+</script>
+</body>
+</html>
