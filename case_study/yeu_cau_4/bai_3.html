@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_3</title>
+</head>
+<body>
+<script>
+    let s1 = "aabcc";
+    let s2 = "adcaa";
+    let s1Array = [];
+    let s2Array = [];
+    let count = 0;
+    for (let i = 0; i < s2.length; i++) {
+        s2Array.push(s2[i]);
+    }
+
+    for (let i = 0; i < s1.length; i++) {
+        if (s2Array.indexOf(s1[i]) != -1) {
+            count++;
+            s2Array.splice(s2Array.indexOf(s1[i]), 1)
+        }
+    }
+    console.log(count);
+</script>
+</body>
+</html>

@@ -15,12 +15,16 @@
     }
     let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let lowerCase = "abcdefghijklmnopqrstuvwxyz";
-    if(lowerCase.indexOf(newString[0])!=(-1)){
-        newString[0].toUpperCase();
+    let result = "";
+    for (let i = 0; i < newString.length; i++) {
+        if(i==0 && lowerCase.indexOf(newString[i])!=(-1)|| newString[i]!=" "&& newString[i-1]==" "){
+            result += newString[i].toUpperCase();
+        }else if(upperCase.indexOf(newString[i])!=(-1)){
+            result += newString[i].toLowerCase();
+        }else result+= newString[i];
     }
-    console.log(newString[0]);
-    console.log(lowerCase.indexOf(newString[0]))
-    alert(newString[0].toUpperCase())
+    console.log(result);
+
 </script>
 </body>
 </html>
