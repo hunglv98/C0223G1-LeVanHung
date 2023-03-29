@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="id" type="text" placeholder="Nhập vào id">
+<input id="name" type="text" placeholder="Nhập vào name">
+<input id="nsx" type="text" placeholder="Nhập vào NSX">
+<input id="price" type="text" placeholder="Nhập vào price">
+<button onclick="addComputer()">Add</button>
+<p id="result"></p>
+<script>
+    class Computer {
+        constructor(id, name, nsx, price) {
+            this.id = id;
+            this.name = name;
+            this.nsx = nsx;
+            this.price = price;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setNsx(nsx) {
+            this.nsx = nsx;
+        }
+
+        getNsx() {
+            return this.nsx;
+        }
+
+        setPrice(price) {
+            this.id = price;
+        }
+
+        getPrice() {
+            return this.price;
+        }
+    }
+
+    let array = [];
+
+    function addComputer() {
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let nsx = document.getElementById("nsx").value;
+        let price = document.getElementById("price").value;
+        let computer = new Computer(id, name, nsx, price);
+        array.push(computer);
+        document.getElementById("id").value="";
+        document.getElementById("name").value="";
+        document.getElementById("nsx").value="";
+        document.getElementById("price").value="";
+
+        display()
+
+    }
+
+    function display() {
+        let table = '<table border="1">' +
+            '    <tr>' +
+            '    <th>ID</th>' +
+            '    <th>Name</th>' +
+            '    <th>Nsx</th>' +
+            '    <th>Price</th>' +
+            '    </tr>'
+        for (let i = 0; i < array.length; i++) {
+            table += '<tr>' +
+                '        <td>' + array[i].id + '</td>' +
+                '        <td>' + array[i].name + '</td>' +
+                '        <td>' + array[i].nsx + '</td>' +
+                '        <td>' + array[i].price + '</td>' +
+                '    </tr>'
+        }
+        table += '</table>';
+        document.getElementById("result").innerHTML = table;
+    }
+
+</script>
+</body>
+</html>
